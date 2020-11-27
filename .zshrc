@@ -7,9 +7,6 @@ compinit
 zstyle ':completion:*:description' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
-#キーバインド
-bindkey -v
-
 #色
 autoload -U colors; colors
 
