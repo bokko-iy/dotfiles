@@ -1,3 +1,15 @@
+function source_file {
+  if [ $# -lt 1 ];then
+    echo "ERROR!!! source_file is called w/o an argument"
+    return
+  fi
+  arg="$1"
+  shift
+  if [ -r "$arg" ]; then
+    source "$arg"
+  fi
+}
+
 autoload -U path
 
 #コマンド補完機能
@@ -43,3 +55,5 @@ setopt correct
 
 #Nautilusの日本語フォルダソートを改善
 export LC_COLLATE="C"
+
+source_file ~/.localrc
